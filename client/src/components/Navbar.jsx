@@ -22,7 +22,7 @@ import { setMode } from "state";
 import FlexBetween from "./FlexBetween";
 import profileImage from "assets/abeer wanous.jpeg";
 
-const Navbar = () => {
+const Navbar = ({ user, isSidebarOpen, setIsSidebarOpen }) => {
   const dispatch = useDispatch();
   const theme = useTheme();
 
@@ -42,7 +42,7 @@ const Navbar = () => {
       >
         {/* Left Side Options */}
         <FlexBetween>
-          <IconButton onClick={() => console.log("open/close sidebar")}>
+          <IconButton onClick={() => setIsSidebarOpen(!isSidebarOpen)}>
             <MenuIcon></MenuIcon>
           </IconButton>
           <FlexBetween
