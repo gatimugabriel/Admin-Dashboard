@@ -1,12 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 
 import {
   AppBar,
+  Box,
+  Button,
   IconButton,
   InputBase,
   Toolbar,
   useTheme,
+  Typography,
+  Menu,
+  MenuItem,
 } from "@mui/material";
 
 import {
@@ -25,6 +30,11 @@ import profileImage from "assets/abeer wanous.jpeg";
 const Navbar = ({ user, isSidebarOpen, setIsSidebarOpen }) => {
   const dispatch = useDispatch();
   const theme = useTheme();
+
+  const [anchorElement, setAnchorElement] = useState(null);
+  const isOpen = Boolean(anchorElement);
+  const handleClick = (event) => setAnchorElement(event.currentTarget);
+  const handleClose = () => setAnchorElement(null);
 
   return (
     <AppBar
@@ -69,6 +79,60 @@ const Navbar = ({ user, isSidebarOpen, setIsSidebarOpen }) => {
           <IconButton>
             <SettingsOutlined sx={{ fontSize: "25px" }} />
           </IconButton>
+          <FlexBetween>
+            <Button
+              onClick={handleClick}
+              sx={{
+                display: "flex",
+                justifyContent: "space-between",
+                alignItems: "center",
+                textTransform: "none",
+                gap: "1rem",
+              }}
+            >
+              {/* User Profile */}
+              <Box
+                component="img"
+                alt="profile"
+                src={profileImage}
+                height="32px"
+                width="32px"
+                borderRadius="50%"
+                sx={{ objectFit: "cover" }}
+              />{" "}
+              <Box textAlign="left">
+                <Typography
+                  fontWeight="bold"
+                  fontSize="0.8rem"
+                  sx={{
+                    color: theme.palette.secondary[100],
+                  }}
+                >
+                  {user.name}
+                </Typography>
+                <Typography
+                  fontSize="0.7rem"
+                  sx={{
+                    color: theme.palette.secondary[200],
+                  }}
+                >
+                  {user.occupation}
+                </Typography>
+              </Box>
+              <ArrowDropDownOutlined
+                sx={{ color: theme.palette.secondary[300], fontSize: "25px" }}
+              />
+            </Button>
+            {/* MUI menu */}
+            <Menu
+              anchorEl={anchorElement}
+              open={isOpen}
+              onClose={handleClose}
+              anchorOrigin={{ vertical: "bottom", horizontal: "center" }}
+            >
+              <MenuItem onClick={handleClose}> Log Out</MenuItem>
+            </Menu>
+          </FlexBetween>
         </FlexBetween>
       </Toolbar>
     </AppBar>

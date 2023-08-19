@@ -89,10 +89,6 @@ const navItems = [
     text: "Performance",
     icon: <TrendingUpOutlined />,
   },
-  {
-    text: "More",
-    icon: null,
-  },
 ];
 const Sidebar = ({
   user,
@@ -130,6 +126,7 @@ const Sidebar = ({
           }}
         >
           <Box width="100%">
+            {/* Title Head Box */}
             <Box m="1.5rem 2rem 2rem 3rem">
               <FlexBetween color={theme.palette.secondary.main}>
                 <Box display="flex" alignItems="center" gap="0.5rem">
@@ -145,7 +142,7 @@ const Sidebar = ({
               </FlexBetween>
             </Box>
 
-            {/* Sidebar Menu */}
+            {/* Sidebar Menu List */}
             <List>
               {navItems.map(({ text, icon }) => {
                 if (!icon) {
@@ -201,7 +198,8 @@ const Sidebar = ({
             </List>
           </Box>
 
-          <Box position="absolute" bottom="2rem">
+          {/* User Profile Box */}
+          <Box marginBottom="1rem">
             <Divider />
             <FlexBetween textTransform="none" gap="1rem" m="1.5rem 2rem 0 3rem">
               <Box
