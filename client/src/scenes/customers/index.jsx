@@ -29,9 +29,9 @@ const Customers = () => {
     {
       field: "phoneNumber",
       headerName: "Phone Number",
-      flex: 0.8,
+      flex: 0.6,
       renderCell: (params) => {
-        return params.value.replace(/^(\d{3})(\d{3})(\d{4})$/, "+$1 ($2-$3)");
+        return params.value.replace(/^(\d{3})(\d{3})(\d{4})/, "($1) $2-$3");
       },
     },
     {
@@ -47,15 +47,15 @@ const Customers = () => {
     {
       field: "role",
       headerName: "Role",
-      flex: 0.5,
+      flex: 0.4,
     },
   ];
   return (
-    <Box m="1.5rem 2.5rem">
+    <Box m="1rem 0 2rem 1rem">
       <Header title="CUSTOMERS" subTitle="List of Customers" />
       <Box
-        mt="40px"
-        height="75vph"
+        mt="32px"
+        height="75vh"
         sx={{
           "& .MuiDataGrid-root": {
             border: "none",
@@ -79,6 +79,9 @@ const Customers = () => {
           },
           "& .MuiDataGrid-toolbarContainer .MuiButton-text": {
             color: `${theme.palette.secondary[200]} !important`,
+          },
+          "& .MuiTablePagination-root": {
+            marginRight: "7rem",
           },
         }}
       >

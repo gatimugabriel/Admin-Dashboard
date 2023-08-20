@@ -47,7 +47,7 @@ const Navbar = ({ user, isSidebarOpen, setIsSidebarOpen }) => {
       <Toolbar
         sx={{
           justifyContent: "space-between",
-          borderBottom: "1px solid gold",
+          mr: "0.1rem",
         }}
       >
         {/* Left Side Options */}
