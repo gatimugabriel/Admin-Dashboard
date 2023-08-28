@@ -5,25 +5,30 @@ This application is aimed to to help administrators visualize application state 
 The project is still in development
 
 # Tech Stack
-React & Material UI for the frontend
-Redux-Toolkit for State Management and Data Caching
-Nodejs & ExpressJs as the runtime environment & backend framework respectively
-MongoDB for data storage
+- [React](https://reactjs.org/) & [Material UI](https://mui.com/) for the frontend
+- [Redux-Toolkit](https://redux-toolkit.js.org/) for State Management and Data Caching
+- [Node.js](https://nodejs.org/) & [Express.js](https://expressjs.com/) as the runtime environment & backend framework respectively
+- [MongoDB](https://www.mongodb.com/) for data storage
 
 # Contibution & Usage
-Clone the above repo and:
+1. Clone the repository:
 
-ensure all the env variables are as provided in the .env.example file
+2. Ensure all the environment variables are set as provided in the `.env.example` file.
 
-navigate to server dir and run: npm install
-run: npm start ; to fire-up the backend server
+3. Navigate to the `server` directory and install dependencies:
 
-navigate back to client dir and run: npm install
-run npm start ; to fire-up the front-end server
+- Run the backend server:
+  ```
+  npm start
+  ```
 
-view, analyze & modify features as you wish.
+4. Navigate back to the `client` directory and install dependencies:
 
-You can create an #issue to fix bug(s)
+
+
+ - view, analyze & modify features as you wish.
+
+ - You can create an #issue to fix bug(s)
 
 
 
