@@ -4,7 +4,7 @@ This application is aimed to to help administrators visualize application state 
 # Note
 The project is still in development
 
-#Tech Stack
+# Tech Stack
 React & Material UI for the frontend
 Redux-Toolkit for State Management and Data Caching
 Nodejs & ExpressJs as the runtime environment & backend framework respectively
