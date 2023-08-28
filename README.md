@@ -21,9 +21,17 @@ The project is still in development
   ```
   npm start
   ```
+- If you have [nodemon] installed globally, run:
+  ```
+  npm run dev
+  ```
 
 4. Navigate back to the `client` directory and install dependencies:
 
+- Run the frontend server:
+  ```
+  npm start
+  ```
 
 
  - view, analyze & modify features as you wish.
