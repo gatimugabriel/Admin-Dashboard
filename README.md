@@ -1,8 +1,6 @@
 # Admin-Dashboard
 This application is aimed to to help administrators visualize application state and live-data changes
 
-# Note
-The project is still in development
 
 # Tech Stack
 - [React](https://reactjs.org/) & [Material UI](https://mui.com/) for the frontend
@@ -21,9 +19,17 @@ The project is still in development
   ```
   npm start
   ```
+- If you have [nodemon] installed globally, run:
+  ```
+  npm run dev
+  ```
 
 4. Navigate back to the `client` directory and install dependencies:
 
+- Run the frontend server:
+  ```
+  npm start
+  ```
 
 
  - view, analyze & modify features as you wish.
