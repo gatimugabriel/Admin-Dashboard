@@ -1,8 +1,6 @@
 # Admin-Dashboard
 This application is aimed to to help administrators visualize application state and live-data changes
 
-# Note
-The project is still in development
 
 # Tech Stack
 - [React](https://reactjs.org/) & [Material UI](https://mui.com/) for the frontend
